@@ -1,0 +1,47 @@
+extends layout.pug
+block variables
+  - var Name = name
+  - var Description = short_description
+block content 
+  nav.grid-container.portfolio-breadcrumb
+    a(href='/') ← Back
+  article.grid-container.portfolio-intro.portfolio-project
+    .grid-x
+      .cell.small-6.medium-9.large-9
+
+        h1 #{name}
+
+        //- Feel free personalize the title below
+        p.lead.text-light
+          | Full Stack JavaScript Developer.
+
+        .portfolio-bio
+          p
+            | #{long_description}
+            | #{long_description}
+            | #{long_description}
+      .cell.portfolio-meta.small-6.medium-2.large-3
+        h6 Skills
+
+        ul
+          li Express
+          li Other cool stuff
+          li Listing my skills
+          li Etc.
+          li Etc. 
+          li Etc.
+        h6 Contact Info
+
+        ul
+          li #{number}
+          li #{email}
+
+
+        a.button.expanded(href=`${linkedin_link}`) LinkedIn
+        a.button.expanded(href=`${github_link}`) GitHub
+        a.button.expanded(href=`${twitter_link}`) Twitter
+      //- Rather than hardcoding the personal information here, I have also added that to data.json this make the application more flexible
+      //- as I only need to change some varibale in the data.json file
+  nav.grid-container.portfolio-breadcrumb
+    a(href='/') ← Back
+  
